@@ -126,22 +126,50 @@ function doit() {
     difference = Math.abs(total_kcal - suggest_kcal)
 
     var exp = max_experience - parseInt(Math.ceil(difference / (suggest_kcal / max_experience)))
+    
     var value = document.getElementById("xp-bar-fill").style.width;
-    if (value != "") {
+      if(value != "")
+      {
         value = parseInt(value, 10);
-        //value=value.substring((0, value.length-2))
-    }
-    value = value + exp;
-    $("#xp-increase-fx").css("display", "inline-block");
-    $("#xp-bar-fill").css("box-shadow", "-5px 0px 10px #fff inset");
-    setTimeout(function () {
-        $("#xp-bar-fill").css("-webkit-transition", "all 1s ease");
-        $("#xp-bar-fill").css("width", value);
-    }, 100);
-    setTimeout(function () {
-        $("#xp-increase-fx").fadeOut(500);
-        $("#xp-bar-fill").css({ "-webkit-transition": "all 0.5s ease", "box-shadow": "" });
-    }, 1000);
+      }
+      if (value <= 124.8)
+      {
+          value = value + exp;
+          $("#xp-increase-fx").css("display","inline-block");
+          $("#xp-bar-fill").css("box-shadow", "-5px 0px 10px #fff inset");
+          setTimeout(function() {
+              $("#xp-bar-fill").css("-webkit-transition","all 1s ease");
+              $("#xp-bar-fill").css("width", value);
+          },100);
+          setTimeout(function() {
+              $("#xp-increase-fx").fadeOut(500);
+              $("#xp-bar-fill").css({"-webkit-transition":"all 0.5s ease","box-shadow":""});
+          },1000);
+      }
+
+      var value1 = document.getElementById("xp-bar-fill1").style.width;
+      if(value1 != "")
+      {
+        value1 = parseInt(value, 10);
+      }
+      if (value1 <= 120.8)
+      {
+          value1 = value1 + exp + 15;
+
+          $("#xp-increase-fx").css("display","inline-block");
+          $("#xp-bar-fill1").css("box-shadow", "-5px 0px 10px #fff inset");
+          setTimeout(function() {
+              $("#xp-bar-fill1").css("-webkit-transition","all 1s ease");
+              $("#xp-bar-fill1").css("width", value1);
+          },100);
+          setTimeout(function() {
+              $("#xp-increase-fx").fadeOut(500);
+              $("#xp-bar-fill1").css({"-webkit-transition":"all 0.5s ease","box-shadow":""});
+          },1000);
+      }
+
+    localStorage.setItem("one", value);
+    localStorage.setItem("two", value1);
 
     localStorage.setItem("rem_cal", suggest_kcal - total_kcal);
     localStorage.setItem("tot_cal", suggest_kcal);
