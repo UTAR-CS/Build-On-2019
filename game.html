@@ -373,7 +373,13 @@
 
     function doit(){
         var value = document.getElementById("xp-bar-fill").style.width;
-        value = value + 50;
+        if(value!="")
+        {
+          value = parseInt(value, 10);
+          //value=value.substring((0, value.length-2))
+        }
+        value = value+ 50;
+        alert(value);
         $("#xp-increase-fx").css("display","inline-block");
         $("#xp-bar-fill").css("box-shadow", "-5px 0px 10px #fff inset");
         setTimeout(function() {

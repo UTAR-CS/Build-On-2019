@@ -117,3 +117,29 @@ function set_active_meal(meal)
 {
     current_active_meal = meal;
 }
+
+function doit() {
+    var difference;
+    var max_experience = 50;
+
+    difference = Math.abs(total_kcal - suggest_kcal)
+
+    var exp = max_experience - parseInt(Math.ceil(difference / (suggest_kcal / max_experience)))
+    var value = document.getElementById("xp-bar-fill").style.width;
+    if (value != "") {
+        value = parseInt(value, 10);
+        //value=value.substring((0, value.length-2))
+    }
+    value = value + exp;
+    $("#xp-increase-fx").css("display", "inline-block");
+    $("#xp-bar-fill").css("box-shadow", "-5px 0px 10px #fff inset");
+    setTimeout(function () {
+        $("#xp-bar-fill").css("-webkit-transition", "all 1s ease");
+        $("#xp-bar-fill").css("width", value);
+    }, 100);
+    setTimeout(function () {
+        $("#xp-increase-fx").fadeOut(500);
+        $("#xp-bar-fill").css({ "-webkit-transition": "all 0.5s ease", "box-shadow": "" });
+    }, 1000);
+}
+
