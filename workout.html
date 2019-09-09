@@ -486,11 +486,11 @@
       setTimeout(function () {
         $("#xp-bar-fill").css("-webkit-transition", "all 1s ease");
         $("#xp-bar-fill").css("width", value);
-      }, 100);
+      }, 0);
       setTimeout(function () {
         $("#xp-increase-fx").fadeOut(500);
         $("#xp-bar-fill").css({ "-webkit-transition": "all 0.5s ease", "box-shadow": "" });
-      }, 1000);
+      }, 0);
 
     }
 
@@ -533,11 +533,7 @@
         } else {
           console.log("Your computer does not support local storage");
         }
-        $("#mytable").html("<thead><th>Name</th><th>Number</th><th>Done</th></thead><tbody><tr><td width=\"40%\"><select name=\"name\" id=\"name\" style=\"width: 100%;\"><option value=\"1\">Walking(steps)</option>" +
-          "<option value=\"2\">Jogging(km)</option><option value=\"3\">Cycling(km)</option><option value=\"4\">Swimming(round)</option><option value=\"5\">Hiking(km)</option>" +
-          "<option value=\"6\">Weight Training(reps)</option></select></td><td width=\"40%\"><input type=\"number\" min=\"1\" style=\"width: 100%;\"></td>" +
-          "<td width=\"20%\"><input type=\"checkbox\" name=\"js-done\" class=\"fee\"></td></tr></tbody>");
-
+        
         event.preventDefault();
       });
     });
