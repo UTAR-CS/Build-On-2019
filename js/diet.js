@@ -104,6 +104,7 @@ function add_food()
         $("." + current_active_meal).append(table);
         $("." + current_active_meal + "-kcal").html("Total calories: " + total_meal_kcal + " kcal");
         calculate_total_kcal();
+        close_overlay();
     }
 }
 
