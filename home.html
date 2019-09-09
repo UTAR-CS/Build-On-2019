@@ -356,4 +356,8 @@
         $("#xp-bar-fill").css("width", width);
         $("#xp-bar-fill1").css("width", width1);
     });
+
+    var avatar = localStorage.getItem("avatar");
+	avatar = JSON.parse(avatar);
+	$(".avatar").append(avatar["avatar"]);
 </script>
