@@ -80,7 +80,7 @@ th, td {
     color: #06D85F;
 }
 .popup .content {
-    max-height: 65%;
+    max-height: 55%;
     overflow: auto
 }
 

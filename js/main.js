@@ -272,8 +272,7 @@
     preloader: false,
 
     fixedContentPos: false
-  });
-
-
+	});
+	
 })(jQuery);
 

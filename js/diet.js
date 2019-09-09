@@ -7,6 +7,10 @@ var dinner_kcal = 0;
 
 var current_active_meal = "";
 
+var avatar = localStorage.getItem("avatar");
+avatar = JSON.parse(avatar);
+$(".avatar").append(avatar["avatar"]);
+
 set_suggest_kcal();
 set_consume_kcal();
 

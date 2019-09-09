@@ -134,12 +134,14 @@
 
       // console.log(detailjson); //comment this
 
-      // var nameobject = $('#namesform').serializeArray();
-      // var namejson ={};
+      var nameobject = $('#namesform').serializeArray();
+      var namejson ={};
 
-      // jQuery.each(nameobject, function(){
-      //   namejson[this.name] = this.value || '';
-      // })
+      jQuery.each(nameobject, function(){
+        namejson[this.name] = this.value || '';
+      })
+
+      localStorage.setItem('avatar', JSON.stringify(namejson));
 
       // console.log(namejson); //comment this
 
