@@ -51,113 +51,118 @@
   <link rel="stylesheet" href="css/material.cyan-light_blue.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> <!--new-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!--new-->
   <style>
     .mario-art {
-        list-style: none;
-        padding: 0;
-        transform: scale(.4);
+      list-style: none;
+      padding: 0;
+      transform: scale(.4);
     }
+
     .mario-art li {
-        display: inline-block;
+      display: inline-block;
     }
+
     .mario-art--mario {
-        position: relative;
-        width: 130px;
-        height: 160px;
-        float:left;
+      position: relative;
+      width: 130px;
+      height: 160px;
+      float: left;
     }
+
     .mario-art--mario:after {
-        content: '';
-        position: absolute;
-        top: -10px;
-        left: -10px;
-        width: 10px;
-        height: 10px;
-        box-shadow: 10px 10px transparent,20px 10px transparent,30px 10px transparent,40px 10px #f00,50px 10px #f00,60px 10px #f00,70px 10px #f00,80px 10px #f00,90px 10px #f00,100px 10px transparent,110px 10px transparent,120px 10px transparent,130px 10px transparent,10px 20px transparent,20px 20px transparent,30px 20px #f00,40px 20px #f00,50px 20px #f00,60px 20px #f00,70px 20px #f00,80px 20px #f00,90px 20px #f00,100px 20px #f00,110px 20px #f00,120px 20px #f00,130px 20px transparent,10px 30px transparent,20px 30px transparent,30px 30px #83401f,40px 30px #83401f,50px 30px #83401f,60px 30px #ffbc77,70px 30px #ffbc77,80px 30px #ffbc77,90px 30px #000,100px 30px #ffbc77,110px 30px transparent,120px 30px transparent,130px 30px transparent,10px 40px transparent,20px 40px #83401f,30px 40px #ffbc77,40px 40px #83401f,50px 40px #ffbc77,60px 40px #ffbc77,70px 40px #ffbc77,80px 40px #ffbc77,90px 40px #000,100px 40px #ffbc77,110px 40px #ffbc77,120px 40px #ffbc77,130px 40px transparent,10px 50px transparent,20px 50px #83401f,30px 50px #ffbc77,40px 50px #83401f,50px 50px #83401f,60px 50px #ffbc77,70px 50px #ffbc77,80px 50px #ffbc77,90px 50px #ffbc77,100px 50px #000,110px 50px #ffbc77,120px 50px #ffbc77,130px 50px #ffbc77,10px 60px transparent,20px 60px #83401f,30px 60px #83401f,40px 60px #ffbc77,50px 60px #ffbc77,60px 60px #ffbc77,70px 60px #ffbc77,80px 60px #ffbc77,90px 60px #000,100px 60px #000,110px 60px #000,120px 60px #000,130px 60px transparent,10px 70px transparent,20px 70px transparent,30px 70px transparent,40px 70px #ffbc77,50px 70px #ffbc77,60px 70px #ffbc77,70px 70px #ffbc77,80px 70px #ffbc77,90px 70px #ffbc77,100px 70px #ffbc77,110px 70px #ffbc77,120px 70px transparent,130px 70px transparent,10px 80px transparent,20px 80px transparent,30px 80px #f00,40px 80px #f00,50px 80px #06f,60px 80px #f00,70px 80px #f00,80px 80px #f00,90px 80px #f00,100px 80px transparent,110px 80px transparent,120px 80px transparent,130px 80px transparent,10px 90px transparent,20px 90px #f00,30px 90px #f00,40px 90px #f00,50px 90px #06f,60px 90px #f00,70px 90px #f00,80px 90px #06f,90px 90px #f00,100px 90px #f00,110px 90px #f00,120px 90px #f00,130px 90px transparent,10px 100px #f00,20px 100px #f00,30px 100px #f00,40px 100px #f00,50px 100px #06f,60px 100px #06f,70px 100px #06f,80px 100px #06f,90px 100px #f00,100px 100px #f00,110px 100px #f00,120px 100px #f00,130px 100px transparent,10px 110px #ffbc77,20px 110px #ffbc77,30px 110px #f00,40px 110px #06f,50px 110px #ff0,60px 110px #06f,70px 110px #06f,80px 110px #ff0,90px 110px #06f,100px 110px #f00,110px 110px #ffbc77,120px 110px #ffbc77,130px 110px transparent,10px 120px #ffbc77,20px 120px #ffbc77,30px 120px #ffbc77,40px 120px #06f,50px 120px #06f,60px 120px #06f,70px 120px #06f,80px 120px #06f,90px 120px #06f,100px 120px #ffbc77,110px 120px #ffbc77,120px 120px #ffbc77,130px 120px transparent,10px 130px #ffbc77,20px 130px #ffbc77,30px 130px #06f,40px 130px #06f,50px 130px #06f,60px 130px #06f,70px 130px #06f,80px 130px #06f,90px 130px #06f,100px 130px #06f,110px 130px #ffbc77,120px 130px #ffbc77,130px 130px transparent,10px 140px transparent,20px 140px transparent,30px 140px #06f,40px 140px #06f,50px 140px #06f,60px 140px transparent,70px 140px transparent,80px 140px #06f,90px 140px #06f,100px 140px #06f,110px 140px transparent,120px 140px transparent,130px 140px transparent,10px 150px transparent,20px 150px #83401f,30px 150px #83401f,40px 150px #83401f,50px 150px transparent,60px 150px transparent,70px 150px transparent,80px 150px transparent,90px 150px #83401f,100px 150px #83401f,110px 150px #83401f,120px 150px transparent,130px 150px transparent,10px 160px #83401f,20px 160px #83401f,30px 160px #83401f,40px 160px #83401f,50px 160px transparent,60px 160px transparent,70px 160px transparent,80px 160px transparent,90px 160px #83401f,100px 160px #83401f,110px 160px #83401f,120px 160px #83401f,130px 160px transparent;
-    }
-    #account-bar-wrapper{
-        position:relative;
-        top:0px;
-        left:0px;
-        width:40%;
-        height:100px;
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 10px;
+      height: 10px;
+      box-shadow: 10px 10px transparent, 20px 10px transparent, 30px 10px transparent, 40px 10px #f00, 50px 10px #f00, 60px 10px #f00, 70px 10px #f00, 80px 10px #f00, 90px 10px #f00, 100px 10px transparent, 110px 10px transparent, 120px 10px transparent, 130px 10px transparent, 10px 20px transparent, 20px 20px transparent, 30px 20px #f00, 40px 20px #f00, 50px 20px #f00, 60px 20px #f00, 70px 20px #f00, 80px 20px #f00, 90px 20px #f00, 100px 20px #f00, 110px 20px #f00, 120px 20px #f00, 130px 20px transparent, 10px 30px transparent, 20px 30px transparent, 30px 30px #83401f, 40px 30px #83401f, 50px 30px #83401f, 60px 30px #ffbc77, 70px 30px #ffbc77, 80px 30px #ffbc77, 90px 30px #000, 100px 30px #ffbc77, 110px 30px transparent, 120px 30px transparent, 130px 30px transparent, 10px 40px transparent, 20px 40px #83401f, 30px 40px #ffbc77, 40px 40px #83401f, 50px 40px #ffbc77, 60px 40px #ffbc77, 70px 40px #ffbc77, 80px 40px #ffbc77, 90px 40px #000, 100px 40px #ffbc77, 110px 40px #ffbc77, 120px 40px #ffbc77, 130px 40px transparent, 10px 50px transparent, 20px 50px #83401f, 30px 50px #ffbc77, 40px 50px #83401f, 50px 50px #83401f, 60px 50px #ffbc77, 70px 50px #ffbc77, 80px 50px #ffbc77, 90px 50px #ffbc77, 100px 50px #000, 110px 50px #ffbc77, 120px 50px #ffbc77, 130px 50px #ffbc77, 10px 60px transparent, 20px 60px #83401f, 30px 60px #83401f, 40px 60px #ffbc77, 50px 60px #ffbc77, 60px 60px #ffbc77, 70px 60px #ffbc77, 80px 60px #ffbc77, 90px 60px #000, 100px 60px #000, 110px 60px #000, 120px 60px #000, 130px 60px transparent, 10px 70px transparent, 20px 70px transparent, 30px 70px transparent, 40px 70px #ffbc77, 50px 70px #ffbc77, 60px 70px #ffbc77, 70px 70px #ffbc77, 80px 70px #ffbc77, 90px 70px #ffbc77, 100px 70px #ffbc77, 110px 70px #ffbc77, 120px 70px transparent, 130px 70px transparent, 10px 80px transparent, 20px 80px transparent, 30px 80px #f00, 40px 80px #f00, 50px 80px #06f, 60px 80px #f00, 70px 80px #f00, 80px 80px #f00, 90px 80px #f00, 100px 80px transparent, 110px 80px transparent, 120px 80px transparent, 130px 80px transparent, 10px 90px transparent, 20px 90px #f00, 30px 90px #f00, 40px 90px #f00, 50px 90px #06f, 60px 90px #f00, 70px 90px #f00, 80px 90px #06f, 90px 90px #f00, 100px 90px #f00, 110px 90px #f00, 120px 90px #f00, 130px 90px transparent, 10px 100px #f00, 20px 100px #f00, 30px 100px #f00, 40px 100px #f00, 50px 100px #06f, 60px 100px #06f, 70px 100px #06f, 80px 100px #06f, 90px 100px #f00, 100px 100px #f00, 110px 100px #f00, 120px 100px #f00, 130px 100px transparent, 10px 110px #ffbc77, 20px 110px #ffbc77, 30px 110px #f00, 40px 110px #06f, 50px 110px #ff0, 60px 110px #06f, 70px 110px #06f, 80px 110px #ff0, 90px 110px #06f, 100px 110px #f00, 110px 110px #ffbc77, 120px 110px #ffbc77, 130px 110px transparent, 10px 120px #ffbc77, 20px 120px #ffbc77, 30px 120px #ffbc77, 40px 120px #06f, 50px 120px #06f, 60px 120px #06f, 70px 120px #06f, 80px 120px #06f, 90px 120px #06f, 100px 120px #ffbc77, 110px 120px #ffbc77, 120px 120px #ffbc77, 130px 120px transparent, 10px 130px #ffbc77, 20px 130px #ffbc77, 30px 130px #06f, 40px 130px #06f, 50px 130px #06f, 60px 130px #06f, 70px 130px #06f, 80px 130px #06f, 90px 130px #06f, 100px 130px #06f, 110px 130px #ffbc77, 120px 130px #ffbc77, 130px 130px transparent, 10px 140px transparent, 20px 140px transparent, 30px 140px #06f, 40px 140px #06f, 50px 140px #06f, 60px 140px transparent, 70px 140px transparent, 80px 140px #06f, 90px 140px #06f, 100px 140px #06f, 110px 140px transparent, 120px 140px transparent, 130px 140px transparent, 10px 150px transparent, 20px 150px #83401f, 30px 150px #83401f, 40px 150px #83401f, 50px 150px transparent, 60px 150px transparent, 70px 150px transparent, 80px 150px transparent, 90px 150px #83401f, 100px 150px #83401f, 110px 150px #83401f, 120px 150px transparent, 130px 150px transparent, 10px 160px #83401f, 20px 160px #83401f, 30px 160px #83401f, 40px 160px #83401f, 50px 160px transparent, 60px 160px transparent, 70px 160px transparent, 80px 160px transparent, 90px 160px #83401f, 100px 160px #83401f, 110px 160px #83401f, 120px 160px #83401f, 130px 160px transparent;
     }
 
-    #account-bar{
-        max-width:966px;
-        width:100%;
-        height:100%;
-        margin:0px auto;
-        float: left;
+    #account-bar-wrapper {
+      position: relative;
+      top: 0px;
+      left: 0px;
+      width: 40%;
+      height: 100px;
     }
 
-    #account-bar-level{
-        font-size:20px;
-        display:inline-block;
-        margin:15px 15px 0px 15px;
+    #account-bar {
+      max-width: 966px;
+      width: 100%;
+      height: 100%;
+      margin: 0px auto;
+      float: left;
     }
 
-    #xp-bar{
-        height:10px;
-        width:100%;
-        background:lightgrey;
-        margin:0px 0px 0px 15px;
-        display:inline-block;
-        vertical-align:middle;
-        border-radius: 10px;
+    #account-bar-level {
+      font-size: 20px;
+      display: inline-block;
+      margin: 15px 15px 0px 15px;
     }
 
-    #xp-bar-fill{
-        height:100%;
-        width:0.1%;
-        background:#3af;
-        font-size:12px;
-        line-height:10px;
-        text-align:right;
-        border-radius: 10px;
+    #xp-bar {
+      height: 10px;
+      width: 100%;
+      background: lightgrey;
+      margin: 0px 0px 0px 15px;
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 10px;
     }
 
-    #xp-increase-fx{
-        position:relative;
-        display:none;
-        height:100%;
+    #xp-bar-fill {
+      height: 100%;
+      width: 0.1%;
+      background: #3af;
+      font-size: 12px;
+      line-height: 10px;
+      text-align: right;
+      border-radius: 10px;
     }
 
-    .xp-increase-glow1{
-        position:absolute;
-        margin:0px 0px 0px -2px;
-        left:0px;
-        top:0px;
-        background:#fff;
-        width:5px;
-        height:100%;
-        border-radius:0px;
-        -webkit-filter:blur(2px);
+    #xp-increase-fx {
+      position: relative;
+      display: none;
+      height: 100%;
     }
 
-    .xp-increase-glow2{
-        position:absolute;
-        margin:-5px 0px 0px -2px;
-        left:0px;
-        top:0px;
-        background:#aaf;
-        width:5px;
-        height:200%;
-        border-radius:0px;
-        -webkit-filter:blur(10px);
+    .xp-increase-glow1 {
+      position: absolute;
+      margin: 0px 0px 0px -2px;
+      left: 0px;
+      top: 0px;
+      background: #fff;
+      width: 5px;
+      height: 100%;
+      border-radius: 0px;
+      -webkit-filter: blur(2px);
     }
 
-    .xp-increase-glow3{
-        position:absolute;
-        margin:0px 0px 0px -5px;
-        left:0px;
-        top:0px;
-        background:#fff;
-        width:10px;
-        height:100%;
-        border-radius:5px;
-        -webkit-filter:blur(5px);
+    .xp-increase-glow2 {
+      position: absolute;
+      margin: -5px 0px 0px -2px;
+      left: 0px;
+      top: 0px;
+      background: #aaf;
+      width: 5px;
+      height: 200%;
+      border-radius: 0px;
+      -webkit-filter: blur(10px);
+    }
+
+    .xp-increase-glow3 {
+      position: absolute;
+      margin: 0px 0px 0px -5px;
+      left: 0px;
+      top: 0px;
+      background: #fff;
+      width: 10px;
+      height: 100%;
+      border-radius: 5px;
+      -webkit-filter: blur(5px);
     }
 
     table.greyGridTable {
@@ -238,86 +243,87 @@
       </div>
     </header>
     <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-        <header class="demo-drawer-header">
-          <img src="images/user.jpg" class="demo-avatar">
-          <div class="demo-avatar-dropdown">
-            <br><br>
-            <div>tinleyter@gmail.com</div>
-            <div class="mdl-layout-spacer"></div>
-          </div>
-        </header>
-        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-          <a class="mdl-navigation__link" href="home.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i><strong>Home</strong></a>
-          <a class="mdl-navigation__link" href="workout.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">fitness_center</i><strong>Workout</strong></a>
-          <a class="mdl-navigation__link" href="diet.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_dining</i><strong>Diet</strong></a>
+      <header class="demo-drawer-header">
+        <img src="images/user.jpg" class="demo-avatar">
+        <div class="demo-avatar-dropdown">
+          <br><br>
+          <div>tinleyter@gmail.com</div>
           <div class="mdl-layout-spacer"></div>
-        </nav>
-      </div>
-    <main class="mdl-layout__content mdl-color--grey-100">
-        <div class="mdl-grid demo-content">
-            <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-                <ul class="mario-art">
-                    <li class="mario-art--mario"></li>
-                </ul>
-                <div id='account-bar-wrapper'>
-                    <div id='account-bar'>
-                        <div id='account-bar-level'>LEVEL</div>
-                            <div id='xp-bar'>
-                                <div id='xp-bar-fill'>
-                                    <div id='xp-increase-fx'>
-                                        <div id='xp-increase-fx-flicker'>
-                                            <div class='xp-increase-glow1'></div>
-                                            <div class='xp-increase-glow2'></div>
-                                            <div class='xp-increase-glow3'></div>
-                                        </div>
-                                        <div class='xp-increase-glow2'></div>
-                                    </div>
-                                </div>
-                            </div> 
-                    </div>
-                </div>
-            </div>
         </div>
-        <div class="mdl-grid demo-content">
+      </header>
+      <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+        <a class="mdl-navigation__link" href="home.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i><strong>Home</strong></a>
+        <a class="mdl-navigation__link" href="workout.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">fitness_center</i><strong>Workout</strong></a>
+        <a class="mdl-navigation__link" href="diet.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_dining</i><strong>Diet</strong></a>
+        <div class="mdl-layout-spacer"></div>
+      </nav>
+    </div>
+    <main class="mdl-layout__content mdl-color--grey-100">
+      <div class="mdl-grid demo-content">
+        <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+          <ul class="mario-art">
+            <li class="mario-art--mario"></li>
+          </ul>
+          <div id='account-bar-wrapper'>
+            <div id='account-bar'>
+              <div id='account-bar-level'>LEVEL</div>
+              <div id='xp-bar'>
+                <div id='xp-bar-fill'>
+                  <div id='xp-increase-fx'>
+                    <div id='xp-increase-fx-flicker'>
+                      <div class='xp-increase-glow1'></div>
+                      <div class='xp-increase-glow2'></div>
+                      <div class='xp-increase-glow3'></div>
+                    </div>
+                    <div class='xp-increase-glow2'></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mdl-grid demo-content">
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong"
           id="insert-more">
           Add New Workout
-        </button> 
+        </button>
       </div>
       <div class="mdl-grid demo-content">
-        
-<form style="width: 100%;">
-        <table id="mytable" class="greyGridTable" >
-          <thead>
-            <th>Name</th>
-            <th>Number</th>
-            <th>Done</th>
-          </thead>
-          <tbody>
-            <tr>
-              <td width="40%">
-                <select name="name" id="name" style="width: 100%;" >
-                  <option value="1">Walking(steps)</option>
-                  <option value="2">Jogging(km)</option>
-                  <option value="3">Cycling(km)</option>
-                  <option value="4">Swimming(round)</option>
-                  <option value="5">Hiking(km)</option>
-                  <option value="6">Weight Training(reps)</option>
-                </select>
-              </td>
-              <td width="40%">
-                <input type="number" min="1" style="width: 100%;">
-              </td>
 
-              <td width="20%">
-                <input type="checkbox" name="js-done" class="fee" >
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <br>
-        <button id="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Submit</button>
-      </form>
+        <form style="width: 100%;">
+          <table id="mytable" class="greyGridTable">
+            <thead>
+              <th>Name</th>
+              <th>Number</th>
+              <th>Done</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td width="40%">
+                  <select name="name" id="name" style="width: 100%;">
+                    <option value="1">Walking(steps)</option>
+                    <option value="2">Jogging(km)</option>
+                    <option value="3">Cycling(km)</option>
+                    <option value="4">Swimming(round)</option>
+                    <option value="5">Hiking(km)</option>
+                    <option value="6">Weight Training(reps)</option>
+                  </select>
+                </td>
+                <td width="40%">
+                  <input type="number" min="1" style="width: 100%;">
+                </td>
+
+                <td width="20%">
+                  <input type="checkbox" name="js-done" class="fee">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <button id="submit" class="btn btn-primary" data-toggle="modal"
+            data-target="#exampleModalLong">Submit</button>
+        </form>
         <!-- <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
             <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1" class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
               <use xlink:href="#piechart" mask="url(#piemask)" />
@@ -456,37 +462,36 @@
   <script src="js/workload.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script>
-    function flicker(){
-    $("#xp-increase-fx-flicker").css("opacity", "1");
-    $("#xp-increase-fx-flicker").animate({"opacity":Math.random()}, 100, flicker);
+    var j = 0, k = 0;
+    function flicker() {
+      $("#xp-increase-fx-flicker").css("opacity", "1");
+      $("#xp-increase-fx-flicker").animate({ "opacity": Math.random() }, 100, flicker);
     }
 
-    $(document).ready(function(){
-    flicker();
+    $(document).ready(function () {
+      flicker();
     });
 
-   
 
-    function doit(per){
-      
-        var value = document.getElementById("xp-bar-fill").style.width;
-        if(value!="")
-        {
-          value = parseInt(value, 10);
-          //value=value.substring((0, value.length-2))
-        }
-        value = value+ 5*per;
-        $("#xp-increase-fx").css("display","inline-block");
-        $("#xp-bar-fill").css("box-shadow", "-5px 0px 10px #fff inset");
-        setTimeout(function() {
-            $("#xp-bar-fill").css("-webkit-transition","all 1s ease");
-            $("#xp-bar-fill").css("width", value);
-        },100);
-        setTimeout(function() {
-            $("#xp-increase-fx").fadeOut(500);
-            $("#xp-bar-fill").css({"-webkit-transition":"all 0.5s ease","box-shadow":""});
-        },1000);
-        
+
+    function doit(per) {
+      var value = document.getElementById("xp-bar-fill").style.width;
+      if (value != "") {
+        value = parseInt(value, 10);
+        //value=value.substring((0, value.length-2))
+      }
+      value = value + 10 * per;
+      $("#xp-increase-fx").css("display", "inline-block");
+      $("#xp-bar-fill").css("box-shadow", "-5px 0px 10px #fff inset");
+      setTimeout(function () {
+        $("#xp-bar-fill").css("-webkit-transition", "all 1s ease");
+        $("#xp-bar-fill").css("width", value);
+      }, 0);
+      setTimeout(function () {
+        $("#xp-increase-fx").fadeOut(500);
+        $("#xp-bar-fill").css({ "-webkit-transition": "all 0.5s ease", "box-shadow": "" });
+      }, 0);
+
     }
 
     $(document).ready(function () {
@@ -507,22 +512,31 @@
 
       $("#submit").click(function () {
         var table = document.getElementById("mytable");
-        var j =0,k=0;
-        for (var i = 1, row; row = table.rows[i]; i++,j++) {
+        var j = 0, k = 0;
+        for (var i = 1, row; row = table.rows[i]; i++ , j++) {
           var chkbox = row.cells[2].childNodes[1];
-          
-          if (chkbox != null && chkbox.checked ==  true) {
+
+          if (chkbox != null && chkbox.checked == true) {
             var dropdown = row.cells[0].childNodes[1].value;
             var txt = row.cells[1].childNodes[1].value;
             k++;
           }
         }
-        doit(k/j);
+        doit(k / j);
 
+        if (typeof (Storage) !== "undefined") {
+          // Store
+          localStorage.setItem("per_workout", k);
+          localStorage.setItem("tot_workout", j);
+          // Retrieve
+
+        } else {
+          console.log("Your computer does not support local storage");
+        }
+        
         event.preventDefault();
       });
     });
-
   </script>
 </body>
 
