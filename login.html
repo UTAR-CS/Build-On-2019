@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WebHost - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,,500,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    
+    <section class="ftco-section testimony-section">
+      <div class="container">
+              <div class="item">
+                <div class="testimony-wrap p-4">
+                  <div style="width:250px; margin:0 auto">
+                      <img src="images/intro.png" style="width:250px; margin:0 auto;">
+                      <p style="float: right">RUN!</p>
+                  </div>
+                  <form action="#" id="loginform">
+                      <div class="form-group">
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Email address">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Password">
+                      </div>
+                      <div class="form-group" style="width:142px; margin: 0 auto; margin-bottom: 10px">
+                        <input type="submit" value="Login" class="btn btn-primary py-3 px-5">
+                      </div>
+                    </form>
+                </div>
+              </div>
+
+              <div class="form-group" style="width:136px; margin: 0 auto; margin-top:30px">
+                  <input type="button" value="Back" class="btn btn-primary py-3 px-5" onclick="location.href='index.html';">
+                </div>
+
+      </div>
+    </section>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+  <script type="text/javascript">
+  $( "#loginform" ).submit(function( event ) {      
+
+    var array = $( this ).serializeArray();
+    var current ={};
+    jQuery.each(array, function(){
+      current[this.name] = this.value || '';
+    })
+
+    var retrieveAcc = JSON.parse(localStorage.getItem("account"));
+    console.log(retrieveAcc);
+    var retrieveSetup = JSON.parse(localStorage.getItem("setup"));
+    console.log(retrieveSetup);
+
+
+    for (var i = 0; i < retrieveAcc.length; i++) {
+      var tempAcc = retrieveAcc[i];
+      if (JSON.stringify(tempAcc) == JSON.stringify(current)) {
+        //verify setup 
+
+        var temp = document.getElementById('email').value;
+        var obj = {
+          email: temp
+        }
+
+        localStorage.setItem("temp", JSON.stringify(obj));
+        //redirect 
+
+        if (retrieveSetup.length != 0) {
+          for (var i = 0; i < retrieveSetup.length; i++) {
+            var tempSetup = retrieveSetup[i];
+            if (JSON.stringify(tempSetup) == JSON.stringify(obj)) {
+              console.log("setup");
+              window.location.href = "home.html";
+              return false;
+
+            } else {
+              console.log("not setup")
+              window.location.href = "setup.html";
+              return false;
+            }
+          }
+        } else {
+          window.location.href = "setup.html";
+          return false;
+        }
+      } 
+    }
+  });
+  </script>
+  </body>
+</html>
