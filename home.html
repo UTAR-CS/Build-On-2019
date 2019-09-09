@@ -262,11 +262,6 @@
         </div>
         <div class="mdl-grid demo-content">
             <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-                <div onclick='doit();' class='btn' id='doit-btn'>DO IT</div>
-            </div>
-        </div>
-        <div class="mdl-grid demo-content">
-            <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
                 <div style="text-align: center;">CALORIES</div>
                 <div id="caloriespiechart"></div>
                 <div style="text-align: center;">WORKOUT PROGRESS</div>
@@ -332,8 +327,8 @@
         }
         var workout_data = google.visualization.arrayToDataTable([
         ['Task', 'Hours per Day'],
-        ['Remain Calories', 100*(per_workout/tot_workout)],
-        ['Consumed Calories', 100 - 100*(per_workout/tot_workout)]
+        ['Performed Workout', 100*(per_workout/tot_workout)],
+        ['Total Workout', 100 - 100*(per_workout/tot_workout)]
         ]);
 
         var workout_options = {
@@ -361,58 +356,4 @@
         $("#xp-bar-fill").css("width", width);
         $("#xp-bar-fill1").css("width", width1);
     });
-
-    function doit(){
-        var value = document.getElementById("xp-bar-fill").style.width;
-        if(value != "")
-        {
-          value = parseInt(value, 10);
-        }
-        if (value <= 124.8)
-        {
-            value = value + 20;
-            $("#xp-increase-fx").css("display","inline-block");
-            $("#xp-bar-fill").css("box-shadow", "-5px 0px 10px #fff inset");
-            setTimeout(function() {
-                $("#xp-bar-fill").css("-webkit-transition","all 1s ease");
-                $("#xp-bar-fill").css("width", value);
-            },100);
-            setTimeout(function() {
-                $("#xp-increase-fx").fadeOut(500);
-                $("#xp-bar-fill").css({"-webkit-transition":"all 0.5s ease","box-shadow":""});
-            },1000);
-        }
-
-        var value1 = document.getElementById("xp-bar-fill1").style.width;
-        if(value1 != "")
-        {
-          value1 = parseInt(value, 10);
-        }
-        if (value1 <= 120.8)
-        {
-            value1 = value1 + 35;
-
-            $("#xp-increase-fx").css("display","inline-block");
-            $("#xp-bar-fill1").css("box-shadow", "-5px 0px 10px #fff inset");
-            setTimeout(function() {
-                $("#xp-bar-fill1").css("-webkit-transition","all 1s ease");
-                $("#xp-bar-fill1").css("width", value1);
-            },100);
-            setTimeout(function() {
-                $("#xp-increase-fx").fadeOut(500);
-                $("#xp-bar-fill1").css({"-webkit-transition":"all 0.5s ease","box-shadow":""});
-            },1000);
-        }
-
-        // Store
-        localStorage.setItem("one", value);
-        localStorage.setItem("two", value1);
-        // Retrieve
-        alert(localStorage.getItem("one"));
-        alert(localStorage.getItem("two"));
-    }
-
-    var avatar = localStorage.getItem("avatar");
-	avatar = JSON.parse(avatar);
-	$(".avatar").append(avatar["avatar"]);
 </script>
