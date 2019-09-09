@@ -1,6 +1,6 @@
 var suggest_kcal = 2800;
 
-var total_kcal = 0
+var total_kcal = 0;
 var breakfast_kcal = 0;
 var lunch_kcal = 0;
 var dinner_kcal = 0;
@@ -141,5 +141,27 @@ function doit() {
         $("#xp-increase-fx").fadeOut(500);
         $("#xp-bar-fill").css({ "-webkit-transition": "all 0.5s ease", "box-shadow": "" });
     }, 1000);
+
+    localStorage.setItem("rem_cal", suggest_kcal - total_kcal);
+    localStorage.setItem("tot_cal", suggest_kcal);
+
+
+    $(".breakfast").html("<tr><th>Food</th><th>Kcal</th></tr>");
+    $(".breakfast-kcal").html("Total calories: ");
+
+    $(".lunch").html("<tr><th>Food</th><th>Kcal</th></tr>");
+    $(".lunch-kcal").html("Total calories: ");
+
+    $(".dinner").html("<tr><th>Food</th><th>Kcal</th></tr>");
+    $(".dinner-kcal").html("Total calories: ");
+
+    $(".total-consume").html(0);
+
+    total_kcal = 0;
+    breakfast_kcal = 0;
+    lunch_kcal = 0;
+    dinner_kcal = 0;
+
+    window.location.href = "#top-page"
 }
 
