@@ -1,0 +1,429 @@
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Material Design Lite</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> <!--new-->
+
+    <style>
+    .mario-art {
+        list-style: none;
+        padding: 0;
+        transform: scale(.4);
+    }
+    .mario-art li {
+        display: inline-block;
+    }
+    .mario-art--mario {
+        position: relative;
+        width: 130px;
+        height: 160px;
+        float:left;
+    }
+    .mario-art--mario:after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: 10px;
+        height: 10px;
+        box-shadow: 10px 10px transparent,20px 10px transparent,30px 10px transparent,40px 10px #f00,50px 10px #f00,60px 10px #f00,70px 10px #f00,80px 10px #f00,90px 10px #f00,100px 10px transparent,110px 10px transparent,120px 10px transparent,130px 10px transparent,10px 20px transparent,20px 20px transparent,30px 20px #f00,40px 20px #f00,50px 20px #f00,60px 20px #f00,70px 20px #f00,80px 20px #f00,90px 20px #f00,100px 20px #f00,110px 20px #f00,120px 20px #f00,130px 20px transparent,10px 30px transparent,20px 30px transparent,30px 30px #83401f,40px 30px #83401f,50px 30px #83401f,60px 30px #ffbc77,70px 30px #ffbc77,80px 30px #ffbc77,90px 30px #000,100px 30px #ffbc77,110px 30px transparent,120px 30px transparent,130px 30px transparent,10px 40px transparent,20px 40px #83401f,30px 40px #ffbc77,40px 40px #83401f,50px 40px #ffbc77,60px 40px #ffbc77,70px 40px #ffbc77,80px 40px #ffbc77,90px 40px #000,100px 40px #ffbc77,110px 40px #ffbc77,120px 40px #ffbc77,130px 40px transparent,10px 50px transparent,20px 50px #83401f,30px 50px #ffbc77,40px 50px #83401f,50px 50px #83401f,60px 50px #ffbc77,70px 50px #ffbc77,80px 50px #ffbc77,90px 50px #ffbc77,100px 50px #000,110px 50px #ffbc77,120px 50px #ffbc77,130px 50px #ffbc77,10px 60px transparent,20px 60px #83401f,30px 60px #83401f,40px 60px #ffbc77,50px 60px #ffbc77,60px 60px #ffbc77,70px 60px #ffbc77,80px 60px #ffbc77,90px 60px #000,100px 60px #000,110px 60px #000,120px 60px #000,130px 60px transparent,10px 70px transparent,20px 70px transparent,30px 70px transparent,40px 70px #ffbc77,50px 70px #ffbc77,60px 70px #ffbc77,70px 70px #ffbc77,80px 70px #ffbc77,90px 70px #ffbc77,100px 70px #ffbc77,110px 70px #ffbc77,120px 70px transparent,130px 70px transparent,10px 80px transparent,20px 80px transparent,30px 80px #f00,40px 80px #f00,50px 80px #06f,60px 80px #f00,70px 80px #f00,80px 80px #f00,90px 80px #f00,100px 80px transparent,110px 80px transparent,120px 80px transparent,130px 80px transparent,10px 90px transparent,20px 90px #f00,30px 90px #f00,40px 90px #f00,50px 90px #06f,60px 90px #f00,70px 90px #f00,80px 90px #06f,90px 90px #f00,100px 90px #f00,110px 90px #f00,120px 90px #f00,130px 90px transparent,10px 100px #f00,20px 100px #f00,30px 100px #f00,40px 100px #f00,50px 100px #06f,60px 100px #06f,70px 100px #06f,80px 100px #06f,90px 100px #f00,100px 100px #f00,110px 100px #f00,120px 100px #f00,130px 100px transparent,10px 110px #ffbc77,20px 110px #ffbc77,30px 110px #f00,40px 110px #06f,50px 110px #ff0,60px 110px #06f,70px 110px #06f,80px 110px #ff0,90px 110px #06f,100px 110px #f00,110px 110px #ffbc77,120px 110px #ffbc77,130px 110px transparent,10px 120px #ffbc77,20px 120px #ffbc77,30px 120px #ffbc77,40px 120px #06f,50px 120px #06f,60px 120px #06f,70px 120px #06f,80px 120px #06f,90px 120px #06f,100px 120px #ffbc77,110px 120px #ffbc77,120px 120px #ffbc77,130px 120px transparent,10px 130px #ffbc77,20px 130px #ffbc77,30px 130px #06f,40px 130px #06f,50px 130px #06f,60px 130px #06f,70px 130px #06f,80px 130px #06f,90px 130px #06f,100px 130px #06f,110px 130px #ffbc77,120px 130px #ffbc77,130px 130px transparent,10px 140px transparent,20px 140px transparent,30px 140px #06f,40px 140px #06f,50px 140px #06f,60px 140px transparent,70px 140px transparent,80px 140px #06f,90px 140px #06f,100px 140px #06f,110px 140px transparent,120px 140px transparent,130px 140px transparent,10px 150px transparent,20px 150px #83401f,30px 150px #83401f,40px 150px #83401f,50px 150px transparent,60px 150px transparent,70px 150px transparent,80px 150px transparent,90px 150px #83401f,100px 150px #83401f,110px 150px #83401f,120px 150px transparent,130px 150px transparent,10px 160px #83401f,20px 160px #83401f,30px 160px #83401f,40px 160px #83401f,50px 160px transparent,60px 160px transparent,70px 160px transparent,80px 160px transparent,90px 160px #83401f,100px 160px #83401f,110px 160px #83401f,120px 160px #83401f,130px 160px transparent;
+    }
+    #account-bar-wrapper{
+        position:relative;
+        top:0px;
+        left:0px;
+        width:40%;
+        height:100px;
+    }
+
+    #account-bar{
+        max-width:966px;
+        width:100%;
+        height:100%;
+        margin:0px auto;
+        float: left;
+    }
+
+    #account-bar-level{
+        font-size:20px;
+        display:inline-block;
+        margin:15px 15px 0px 15px;
+    }
+
+    #xp-bar{
+        height:10px;
+        width:100%;
+        background:lightgrey;
+        margin:0px 0px 0px 15px;
+        display:inline-block;
+        vertical-align:middle;
+        border-radius: 10px;
+    }
+
+    #xp-bar-fill{
+        height:100%;
+        width:0.1%;
+        background:#3af;
+        font-size:12px;
+        line-height:10px;
+        text-align:right;
+        border-radius: 10px;
+    }
+
+    #xp-bar1{
+        height:10px;
+        width:100%;
+        background:lightgrey;
+        margin:0px 0px 0px 15px;
+        display:inline-block;
+        vertical-align:middle;
+        border-radius: 10px;
+    }
+
+    #xp-bar-fill1{
+        height:100%;
+        width:0.1%;
+        background:rgb(255, 51, 51);
+        font-size:12px;
+        line-height:10px;
+        text-align:right;
+        border-radius: 10px;
+    }
+
+    #xp-increase-fx{
+        position:relative;
+        display:none;
+        height:100%;
+    }
+
+    .xp-increase-glow1{
+        position:absolute;
+        margin:0px 0px 0px -2px;
+        left:0px;
+        top:0px;
+        background:#fff;
+        width:5px;
+        height:100%;
+        border-radius:0px;
+        -webkit-filter:blur(2px);
+    }
+
+    .xp-increase-glow2{
+        position:absolute;
+        margin:-5px 0px 0px -2px;
+        left:0px;
+        top:0px;
+        background:#aaf;
+        width:5px;
+        height:200%;
+        border-radius:0px;
+        -webkit-filter:blur(10px);
+    }
+
+    .xp-increase-glow3{
+        position:absolute;
+        margin:0px 0px 0px -5px;
+        left:0px;
+        top:0px;
+        background:#fff;
+        width:10px;
+        height:100%;
+        border-radius:5px;
+        -webkit-filter:blur(5px);
+    }
+    </style>
+  </head>
+  <body>
+    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+      <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Home</span>
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="search">
+              <label class="mdl-textfield__label" for="search">Enter your query...</label>
+            </div>
+          </div>
+          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+            <i class="material-icons">more_vert</i>
+          </button>
+          <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+            <li class="mdl-menu__item">About</li>
+            <li class="mdl-menu__item">Contact</li>
+            <li class="mdl-menu__item">Legal information</li>
+          </ul>
+        </div>
+      </header>
+      <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+        <header class="demo-drawer-header">
+          <img src="images/user.jpg" class="demo-avatar">
+          <div class="demo-avatar-dropdown">
+            <span>hello@example.com</span>
+            <div class="mdl-layout-spacer"></div>
+            <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+              <i class="material-icons" role="presentation">arrow_drop_down</i>
+              <span class="visuallyhidden">Accounts</span>
+            </button>
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+              <li class="mdl-menu__item">hello@example.com</li>
+              <li class="mdl-menu__item">info@example.com</li>
+              <li class="mdl-menu__item"><i class="material-icons">add</i>Add another account...</li>
+            </ul>
+          </div>
+        </header>
+        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Inbox</a>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Trash</a>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Spam</a>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Forums</a>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Updates</a>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Promos</a>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">shopping_cart</i>Purchases</a>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Social</a>
+          <div class="mdl-layout-spacer"></div>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content mdl-color--grey-100">
+        <div class="mdl-grid demo-content">
+            <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" style="height:140px">
+                <ul class="mario-art">
+                    <li class="mario-art--mario" style="margin-bottom:-100px"></li>
+                </ul>
+                <div id='account-bar-wrapper'>
+                    <div id='account-bar'>
+                        <div id='username'></div>
+                        <div id='account-bar-level'>LEVEL 5</div>
+                        <div id='xp-bar'>
+                            <div id='xp-bar-fill'>
+                                <div id='xp-increase-fx'>
+                                    <div id='xp-increase-fx-flicker'>
+                                        <div class='xp-increase-glow1'></div>
+                                        <div class='xp-increase-glow2'></div>
+                                        <div class='xp-increase-glow3'></div>
+                                    </div>
+                                    <div class='xp-increase-glow2'></div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div id='account-bar-level'>POWER</div>
+                        <div id='xp-bar1'>
+                            <div id='xp-bar-fill1'>
+                                <div id='xp-increase-fx'>
+                                    <div id='xp-increase-fx-flicker'>
+                                        <div class='xp-increase-glow1'></div>
+                                        <div class='xp-increase-glow2'></div>
+                                        <div class='xp-increase-glow3'></div>
+                                    </div>
+                                    <div class='xp-increase-glow2'></div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mdl-grid demo-content">
+            <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+                <div onclick='doit();' class='btn' id='doit-btn'>DO IT</div>
+            </div>
+        </div>
+        <div class="mdl-grid demo-content">
+            <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+                <div style="text-align: center;">CALORIES</div>
+                <div id="caloriespiechart"></div>
+                <div style="text-align: center;">WORKOUT PROGRESS</div>
+                <div id="workoutpiechart"></div>
+            </div>
+        </div>
+      </main>
+    </div>
+    <script src="js/material.min.js"></script>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  </body>
+</html>
+
+<script>
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    // Draw the chart and set the chart values
+    function drawChart() {
+        if (localStorage.getItem("rem_cal") === null) {
+            var rem_cal = 0;
+        }
+        else {
+            var rem_cal = localStorage.getItem("rem_cal");
+        }
+        if (localStorage.getItem("tot_cal") === null) {
+            var tot_cal = 3000;
+        }
+        else {
+            var tot_cal = localStorage.getItem("tot_cal");
+        }
+
+        var calories_data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['Remain Calories', 100*(rem_cal/tot_cal)],
+        ['Consumed Calories', 100 - 100*(rem_cal/tot_cal)]
+        ]);
+
+        var calories_options = {
+            titlePosition: 'none', 
+            'width':300, 
+            'height':300, 
+            legend: 'none',
+            pieHole: 0.4,
+            colors: ['#034f84', '#f7786b']
+        };
+
+        var calorieschart = new google.visualization.PieChart(document.getElementById('caloriespiechart'));
+        calorieschart.draw(calories_data, calories_options);
+
+        if (localStorage.getItem("per_workout") === null) {
+            var per_workout = 0;
+        }
+        else {
+            var per_workout = localStorage.getItem("per_workout");
+        }
+        if (localStorage.getItem("tot_workout") === null) {
+            var tot_workout = 10;
+        }
+        else {
+            var tot_workout = localStorage.getItem("tot_workout");
+        }
+        var workout_data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['Remain Calories', 100*(per_workout/tot_workout)],
+        ['Consumed Calories', 100 - 100*(per_workout/tot_workout)]
+        ]);
+
+        var workout_options = {
+            titlePosition: 'none',
+            'width':300, 
+            'height':300, 
+            legend: 'none', 
+            pieHole: 0.4,
+            colors: ['#6b5b95', '#ff7b25']
+        };
+
+        var calorieschart = new google.visualization.PieChart(document.getElementById('workoutpiechart'));
+        calorieschart.draw(workout_data, workout_options);
+    }
+
+    function flicker(){
+        $("#xp-increase-fx-flicker").css("opacity", "1");
+        $("#xp-increase-fx-flicker").animate({"opacity":Math.random()}, 100, flicker);
+    }
+
+    $(document).ready(function(){
+        flicker();
+        var width = localStorage.getItem("one");
+        var width1 = localStorage.getItem("two");
+        $("#xp-bar-fill").css("width", width);
+        $("#xp-bar-fill1").css("width", width1);
+    });
+
+    function doit(){
+        var value = document.getElementById("xp-bar-fill").style.width;
+        if(value != "")
+        {
+          value = parseInt(value, 10);
+        }
+        if (value <= 124.8)
+        {
+            value = value + 20;
+            $("#xp-increase-fx").css("display","inline-block");
+            $("#xp-bar-fill").css("box-shadow", "-5px 0px 10px #fff inset");
+            setTimeout(function() {
+                $("#xp-bar-fill").css("-webkit-transition","all 1s ease");
+                $("#xp-bar-fill").css("width", value);
+            },100);
+            setTimeout(function() {
+                $("#xp-increase-fx").fadeOut(500);
+                $("#xp-bar-fill").css({"-webkit-transition":"all 0.5s ease","box-shadow":""});
+            },1000);
+        }
+
+        var value1 = document.getElementById("xp-bar-fill1").style.width;
+        if(value1 != "")
+        {
+          value1 = parseInt(value, 10);
+        }
+        if (value1 <= 120.8)
+        {
+            value1 = value1 + 35;
+
+            $("#xp-increase-fx").css("display","inline-block");
+            $("#xp-bar-fill1").css("box-shadow", "-5px 0px 10px #fff inset");
+            setTimeout(function() {
+                $("#xp-bar-fill1").css("-webkit-transition","all 1s ease");
+                $("#xp-bar-fill1").css("width", value1);
+            },100);
+            setTimeout(function() {
+                $("#xp-increase-fx").fadeOut(500);
+                $("#xp-bar-fill1").css({"-webkit-transition":"all 0.5s ease","box-shadow":""});
+            },1000);
+        }
+
+        // Store
+        localStorage.setItem("one", value);
+        localStorage.setItem("two", value1);
+        // Retrieve
+        alert(localStorage.getItem("one"));
+        alert(localStorage.getItem("two"));
+    }
+</script>
