@@ -312,8 +312,19 @@
 
     // Draw the chart and set the chart values
     function drawChart() {
-        var rem_cal = 500;
-        var tot_cal = 3000;
+        if (localStorage.getItem("rem_cal") === null) {
+            var rem_cal = 0;
+        }
+        else {
+            var rem_cal = localStorage.getItem("rem_cal");
+        }
+        if (localStorage.getItem("tot_cal") === null) {
+            var tot_cal = 3000;
+        }
+        else {
+            var tot_cal = localStorage.getItem("tot_cal");
+        }
+
         var calories_data = google.visualization.arrayToDataTable([
         ['Task', 'Hours per Day'],
         ['Remain Calories', 100*(rem_cal/tot_cal)],
@@ -322,7 +333,8 @@
 
         var calories_options = {
             titlePosition: 'none', 
-            'width':300, 'height':300, 
+            'width':300, 
+            'height':300, 
             legend: 'none',
             pieHole: 0.4,
             colors: ['#034f84', '#f7786b']
@@ -331,12 +343,22 @@
         var calorieschart = new google.visualization.PieChart(document.getElementById('caloriespiechart'));
         calorieschart.draw(calories_data, calories_options);
 
-        var rem_workout = 3;
-        var tot_workout = 10;
+        if (localStorage.getItem("per_workout") === null) {
+            var per_workout = 0;
+        }
+        else {
+            var per_workout = localStorage.getItem("per_workout");
+        }
+        if (localStorage.getItem("tot_workout") === null) {
+            var tot_workout = 10;
+        }
+        else {
+            var tot_workout = localStorage.getItem("tot_workout");
+        }
         var workout_data = google.visualization.arrayToDataTable([
         ['Task', 'Hours per Day'],
-        ['Remain Calories', 100*(rem_workout/tot_workout)],
-        ['Consumed Calories', 100 - 100*(rem_workout/tot_workout)]
+        ['Remain Calories', 100*(per_workout/tot_workout)],
+        ['Consumed Calories', 100 - 100*(per_workout/tot_workout)]
         ]);
 
         var workout_options = {
@@ -358,7 +380,11 @@
     }
 
     $(document).ready(function(){
-    flicker();
+        flicker();
+        var width = localStorage.getItem("one");
+        var width1 = localStorage.getItem("two");
+        $("#xp-bar-fill").css("width", width);
+        $("#xp-bar-fill1").css("width", width1);
     });
 
     function doit(){
@@ -402,5 +428,12 @@
                 $("#xp-bar-fill1").css({"-webkit-transition":"all 0.5s ease","box-shadow":""});
             },1000);
         }
+
+        // Store
+        localStorage.setItem("one", value);
+        localStorage.setItem("two", value1);
+        // Retrieve
+        alert(localStorage.getItem("one"));
+        alert(localStorage.getItem("two"));
     }
 </script>
